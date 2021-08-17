@@ -1,6 +1,12 @@
-html, body {
-    height: 90vh;
+
+span {
+    position: relative;
+    left: 105px;
+    bottom: 21px;
+    font-size: large;
+    color: #4285f4;
 }
+
 .form-container {
     display: flex;
     flex-direction: column;
@@ -11,29 +17,23 @@ html, body {
 
 .search-button-container {
     display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-.search-button {
-    border-radius: 4px;
-    background-color: #f8f9fa;
-    border: 1px solid #f8f9fa;
-    color: #3c4043;
-    font-size: 14px;
-    height: 36px;
-    cursor: pointer;
-    line-height: 27px;
+    position: relative;
+    left: 94%;
+    bottom: 50%;
 }
 
 .search-input-container {
     width: 100%;
     height: 45px;
     border-radius: 20px;
-    border: 1px solid rgb(172, 172, 172) ;
+    border: 1px solid rgb(172, 172, 172);
     margin: 15px 0px;
     display: flex;
     justify-content: space-between;
+}
+
+.search-input-container:hover {
+    box-shadow: 2px 2px 2px 2px #969696;
 }
 
 form {
@@ -43,7 +43,7 @@ form {
 }
 
 .search-input {
-    width: 95%;
+    width: 93%;
     height: 40px;
     border: none;
     border-radius: 20px;
@@ -55,11 +55,15 @@ form {
     border-radius: 20px;
 }
 
-.search-input-container:hover {
-    box-shadow: 2px 2px 2px 2px #969696;
-}
-
 .search-icon {
     width: 20px;
     margin: 13px 0 0 13px;
+}
+
+.search-button {
+    display: flex;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    width: 40px;
+    height: 30px;
 }
