@@ -7,8 +7,53 @@
     <title>Advanced Search</title>
     <link href="./static/img/favicon.ico" rel="icon">
     <link rel="stylesheet" href="./static/css/main.css">
+    <link rel="stylesheet" href="./static/css/advanced_search.css">
 </head>
 <body>
-    
+    <header>
+        <a href="./"><img class="logo" src="./static/img/google.png" alt="google"></a>
+        <nav class="nav-bar">
+            <a href="./images.html" class="nav-bar-item">Google Image Search</a>
+            <a href="./advanced_search.html" class="nav-bar-item">Google Search</a>
+        </nav>
+    </header>
+    <div class="form-container">
+        <span class="red">Advanced search</span>
+        <hr>
+        <form action="https://google.com/search" method="GET">
+            <div class="messages">
+                <b><span>Find pages with...</span></b>
+            </div>
+            <div class="data_container">
+                <div class="field_container">
+                    <span>all these words:</span>
+                    <input type="text" name="as_q">
+                    <span>Type the important words: tri-colour rat terrier</span>
+                </div>
+                <div class="field_container">
+                    <span>this exact word or phrase:</span>
+                    <input type="text" name="as_epq">
+                    <span>Put exact words in quotes: "rat terrier"</span>
+                </div>
+                <div class="field_container">
+                    <span>any of these words:</span>
+                    <input type="text" name="as_oq">
+                    <span>Type OR between all the words you want: miniature OR standard</span>
+                </div>
+                <div class="field_container">
+                    <span>none of these words:</span>
+                    <input type="text" name="as_eq">
+                    <span>Put a minus sign just before words that you don't want: -rodent, -"Jack Russell"</span>
+                </div>
+                <div class="button_container">
+                    <button type="submit" class="submit_button">Advanced Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+<footer>
+    <p>Designed by: <a href="https://www.linkedin.com/in/edgarramirezfuentes/" target="_blank">Edgar Ram&iacute;rez</a></p>
+</footer>
 </body>
 </html>

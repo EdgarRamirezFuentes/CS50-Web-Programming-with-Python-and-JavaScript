@@ -1,0 +1,51 @@
+header {
+    display: flex;
+}
+
+.nav-bar {
+    align-items: center;
+    width: 100%;
+}
+
+.red {
+    color: #FF0000;
+    font-weight: bold;
+    font-size: large;
+}
+
+.logo {
+    height: 40px;
+    margin: 20px;
+}
+
+.form-container {
+    margin: 20px;
+    width: 70%;
+}
+
+.field_container {
+    display: grid;
+    grid-template-columns: 0.6fr 2fr 2fr;
+    grid-column-gap: 5px;
+    row-gap: 5px;
+    margin-top: 10px;
+}
+
+.submit_button {
+    background-color: #8ab4f8;
+    border: 1px solid #3079ed;
+    color: #FFFFFF;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.button_container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    margin: 25px 0px 0px 60px;
+}
+
+input:active {
+    border-color: #8ab4f8;
+}
