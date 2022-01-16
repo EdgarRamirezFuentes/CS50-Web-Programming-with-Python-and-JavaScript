@@ -1,0 +1,10 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    {{ entry }}
+{% endblock %}
+
+{% block body %}
+    <!-- Entry markdown content in HTML -->
+    {{ entry_content | safe}}
+{% endblock %}
