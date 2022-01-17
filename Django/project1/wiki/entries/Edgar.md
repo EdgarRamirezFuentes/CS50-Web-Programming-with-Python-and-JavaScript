@@ -1,4 +1,4 @@
-# std::cout << "Hello world!  <img alt="wave" src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">" << std::endl; 
+# std::cout << "Hello world!<img alt="wave" src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">" << std::endl; 
 
 [![Twitter Badge](https://img.shields.io/badge/-@EdgarRamirezDev-1ca0f1?style=flat-square&labelColor=1ca0f1&logo=twitter&logoColor=white&link=https://twitter.com/EdgarRamirezDev)](https://twitter.com/EdgarRamirezDev) [![Linkedin Badge](https://img.shields.io/badge/-edgarramirezfuentes-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/edgarramirezfuentes/)](https://www.linkedin.com/in/edgarramirezfuentes/) [![Gmail Badge](https://img.shields.io/badge/-edgar.ramirez.fuentes.dev@gmail.com-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:edgar.ramirez.fuentes.dev@gmail.com)](mailto:edgar.ramirez.fuentes.dev@gmail.com)
 

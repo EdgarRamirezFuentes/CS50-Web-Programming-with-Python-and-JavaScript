@@ -120,3 +120,38 @@ def add_page(request):
         "form_add" : NewEntryForm(),
         "form" : SearchEntryForm()
     })
+
+
+def edit_entry(request, entry):
+    if request.method == "POST":
+        edit_form = NewEntryForm(request.POST)
+        
+        if edit_form.is_valid():
+            # Get the edited data from the form
+            content = edit_form.cleaned_data.get('content')
+            # Save the edited data from the form
+            util.save_entry(entry, content)
+            # Notify that the data was edited sucessfully
+            messages.success(request, f"{ entry } was edited succcessfully!" )
+            return HttpResponseRedirect(reverse("encyclopedia:index"))
+        else: 
+            # Notify that there was an error
+            messages.error(request, "The form is not valid!")
+            return render(request, "encyclopedia/edit_page.html", {
+                "edit_form" : edit_form,
+                "form" : SearchEntryForm(), 
+                'entry' : entry
+            })
+
+    # Get the saved Markdown content of the entry
+    entry_content = util.get_entry(entry)
+    # Initialize the form with the information of the entry
+    edit_form = NewEntryForm(initial={'title': entry, 'content' : entry_content })
+    # Set the title field as readonly
+    edit_form.fields['title'].widget.attrs['readonly'] = True 
+
+    return render(request, "encyclopedia/edit_page.html", {
+        'form' : SearchEntryForm(),
+        'edit_form' : edit_form,
+        'entry' : entry
+    })

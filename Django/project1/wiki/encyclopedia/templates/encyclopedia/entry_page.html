@@ -6,5 +6,6 @@
 
 {% block body %}
     <!-- Entry markdown content in HTML -->
+    <a href="{% url 'encyclopedia:edit_page' entry %}">Edit content</a>
     {{ entry_content | safe}}
 {% endblock %}
