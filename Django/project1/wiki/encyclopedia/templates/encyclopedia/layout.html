@@ -7,8 +7,15 @@
         <title>{% block title %}{% endblock %}</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="{% static 'encyclopedia/styles.css' %}" rel="stylesheet">
+        <script src="{% static 'encyclopedia/alerts.js' %}"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     </head>
     <body>
+        {% if messages %}
+            {% for message in messages %}
+                <script>show_message("{{message.tags}}", "{{message}}", "{{message.tags}}");</script>
+            {% endfor %}
+        {% endif %}
         <div class="row">
             <div class="sidebar col-lg-2 col-md-3">
                 <h2>Wiki</h2>
@@ -20,7 +27,7 @@
                     <a href="{% url 'encyclopedia:index' %}">Home</a>
                 </div>
                 <div>
-                    Create New Page
+                    <a href="{% url 'encyclopedia:add_page' %}">Create New Page</a>
                 </div>
                 <div>
                     Random Page
@@ -33,6 +40,5 @@
                 {% endblock %}
             </div>
         </div>
-
     </body>
 </html>
