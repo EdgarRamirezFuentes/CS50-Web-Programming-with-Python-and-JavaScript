@@ -12,5 +12,8 @@ urlpatterns = [
     # Add a new page
     path("wiki/add-page", views.add_page, name="add_page"),
     # Edit the content of an entry
-    path("wiki/edit/<str:entry>", views.edit_entry, name="edit_page")
+    path("wiki/edit/<str:entry>", views.edit_entry, name="edit_page"),
+    # Random entry url 
+    path("wiki/random", views.random_entry, name="random_page")
+
 ]

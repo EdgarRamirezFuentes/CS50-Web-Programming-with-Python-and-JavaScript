@@ -1,5 +1,6 @@
 from cProfile import label
 from logging import PlaceHolder
+import random
 from django.shortcuts import render
 from django.urls import reverse
 from django.http import HttpResponseRedirect
@@ -155,3 +156,8 @@ def edit_entry(request, entry):
         'edit_form' : edit_form,
         'entry' : entry
     })
+
+
+def random_entry(request):
+    entry = random.choice(util.list_entries())
+    return HttpResponseRedirect(reverse('encyclopedia:entry_page', args=[entry,]))
