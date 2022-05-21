@@ -43,4 +43,4 @@ def get_similar_entries(entry):
     _, filenames = default_storage.listdir("entries")
 
     return list(sorted(re.sub(r"\.md$", "", filename)
-                for filename in filenames if filename.endswith(".md") and re.search(rf"{entry}", filename, re.IGNORECASE)))
+                for filename in filenames if filename.endswith(".md") and re.search(rf"{entry}", re.sub(r"\.md$", "", filename), re.IGNORECASE)))
