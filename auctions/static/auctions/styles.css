@@ -1,3 +1,12 @@
 body {
     padding: 10px;
 }
+
+.card:hover {
+    background-color: 'red';
+}
+
+.navbar {
+    align-items: space-between;
+}
+
